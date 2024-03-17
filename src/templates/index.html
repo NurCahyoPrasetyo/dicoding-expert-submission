@@ -2,18 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Restaurant Apps</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All In</title>
+    <meta
+      name="description"
+      content="All In merupakan project dari course Front End Expert Dicoding yang berkaitan dengan resto"
+    />
+    <link rel="manifest" href="./app.webmanifest" />
   </head>
   <body>
-    <h1>Restaurant Apps Starter Project</h1>
-    <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-    <p>
-      Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros
-      sebagai background hero elemen.
-    </p>
-    <img src="./images/heros/hero-image_1.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_4.jpg" width="450" alt="" />
+    <a href="#item_content" aria-label="Menuju ke konten" class="skip_link"
+      >Menuju ke konten</a
+    >
+    <navigation-bar /></navigation-bar>
+    <main>
+      <jumbotron-element></jumbotron-element>
+      <section class="contents_container" id="item_content">
+        <div class="contents_title">
+          <h2>Explore Restoran All In</h2>
+          <p>
+            Restoran ini menjadi tempat yang sempurna untuk bersantap dengan
+            keluarga, teman, atau bahkan untuk pertemuan bisnis yang santai
+            temukan di daerah kamu.
+          </p>
+        </div>
+        <item-list></item-list>
+      </section>
+
+      <div class="overlay">
+        <img src="" alt="Zoomed Image" class="zoomed-image" />
+        <button class="close-button" id="close-zoom">
+          X
+        </button>
+      </div>
+
+    </main>
+
+    <footer-bar></footer-bar>
   </body>
 </html>

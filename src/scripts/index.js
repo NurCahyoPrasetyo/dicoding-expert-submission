@@ -1,4 +1,7 @@
-import 'regenerator-runtime'; /* for async await transpile */
-import '../styles/main.css';
+import "regenerator-runtime"; /* for async await transpile */
+import "../styles/index.scss";
 
-console.log('Hello Coders! :)');
+import main from "./view/main.js";
+import "./components/index";
+
+document.addEventListener("DOMContentLoaded", main);
