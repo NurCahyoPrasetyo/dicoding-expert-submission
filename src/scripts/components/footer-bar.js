@@ -9,9 +9,7 @@ class FooterBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <footer>
       <p>Copyright &copy; 2024 - Restoran All In</p>
-    </footer>
             `;
   }
 }

@@ -9,7 +9,6 @@ class NavigationBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-          <header id="header">
               <nav class="nav_containers container">
                     <a href="/" class="nav_brandr" aria-label="All In App"
                       ><img src="./images/icons/icon.png" id="logo" alt="Logo All In"
@@ -37,7 +36,6 @@ class NavigationBar extends HTMLElement {
                     </ul>
                   </div>
               </nav>
-          </header>
           `;
   }
 }

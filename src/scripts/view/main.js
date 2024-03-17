@@ -3,7 +3,7 @@ const main = () => {
   const skipLinkBtn = document.querySelector(".skip_link");
   const navLists = document.querySelector(".nav_lists");
   const navItem = document.querySelectorAll(".nav_item");
-  const mainElement = document.querySelector("main");
+  const mainElement = document.querySelector("#main");
 
   const zoomedImg = document.querySelector(".zoomed-image");
   const closeZoomBtn = document.querySelector("#close-zoom");
@@ -75,12 +75,6 @@ const main = () => {
     image.addEventListener("click", handleShowZoomedImage);
   });
   closeZoomBtn.addEventListener("click", handleCloseZoom);
-
-  document.querySelectorAll("a, button, input").forEach((e) => {
-    if (e.offsetWidth < 44 || e.offsetHeight < 44) {
-      console.log(e);
-    }
-  });
 };
 
 export default main;

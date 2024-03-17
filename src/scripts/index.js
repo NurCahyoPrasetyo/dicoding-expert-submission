@@ -1,7 +1,7 @@
 import "regenerator-runtime"; /* for async await transpile */
 import "../styles/index.scss";
 
-import main from "./view/main.js";
 import "./components/index";
+import main from "./view/main.js";
 
 document.addEventListener("DOMContentLoaded", main);

@@ -15,8 +15,11 @@
     <a href="#item_content" aria-label="Menuju ke konten" class="skip_link"
       >Menuju ke konten</a
     >
-    <navigation-bar /></navigation-bar>
-    <main>
+    <header id="header">
+      <navigation-bar /></navigation-bar>
+    </header>
+
+    <main id="main">
       <jumbotron-element></jumbotron-element>
       <section class="contents_container" id="item_content">
         <div class="contents_title">
@@ -32,13 +35,13 @@
 
       <div class="overlay">
         <img src="" alt="Zoomed Image" class="zoomed-image" />
-        <button class="close-button" id="close-zoom">
-          X
-        </button>
+        <button class="close-button" id="close-zoom">X</button>
       </div>
-
     </main>
 
-    <footer-bar></footer-bar>
+    <footer id="footer">
+      <footer-bar></footer-bar>
+    </footer>
+
   </body>
 </html>
