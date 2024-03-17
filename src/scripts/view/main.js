@@ -71,8 +71,8 @@ const main = () => {
   navLists.addEventListener("click", handleCloseNavList);
   mainElement.addEventListener("click", handleCloseNavList);
   skipLinkBtn.addEventListener("keydown", handleSkipLinkKeydown);
-  clickableImages.forEach(function (image) {
-    image.addEventListener("click", handleShowZoomedImage);
+  clickableImages.forEach(function (button) {
+    button.addEventListener("click", handleShowZoomedImage);
   });
   closeZoomBtn.addEventListener("click", handleCloseZoom);
 };
