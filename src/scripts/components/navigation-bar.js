@@ -9,7 +9,7 @@ class NavigationBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-              <nav class="nav_containers container">
+              <nav id="navigationDrawer" class="nav_containers container">
                     <a href="/" class="nav_brandr" aria-label="All In App"
                       ><img src="./images/icons/icon.png" id="logo" alt="Logo All In"
                       width="44" height="44"/></a>
@@ -22,8 +22,8 @@ class NavigationBar extends HTMLElement {
                         &#9776;
                     </button>
                     <ul class="nav_lists">
-                        <li><a href="/" class="nav_item">Home</a></li>
-                        <li><a href="#/" class="nav_item">Favorite</a></li>
+                        <li><a href="#/home" class="nav_item">Home</a></li>
+                        <li><a href="#/favorite" class="nav_item">Favorite</a></li>
                         <li>
                             <a
                             href="https://www.nurchy.com/"

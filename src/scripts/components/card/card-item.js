@@ -23,7 +23,7 @@ class CardItem extends HTMLElement {
           <section class="card_content">
             <p><span>Rating:</span> ${this.getAttribute("rating")}</p>
             <h1>
-              <a href="#/">
+              <a href="${this.getAttribute("href")}">
                 ${this.getAttribute("name")}
               </a>
             </h1>
