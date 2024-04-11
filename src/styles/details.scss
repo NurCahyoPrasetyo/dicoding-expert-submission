@@ -6,29 +6,36 @@
 }
 
 .details-title {
-    font-size: 24px;
+    font-size: 28px;
     color: $primary;
     margin-bottom: 32px;
+    font-weight: $bold;
+    text-transform: uppercase;
 
     span {
         font-size: 18px;
         color: $secondary;
         font-weight: $regular;
+        text-transform: capitalize;
     }
 }
 
 .details-subtitle {
     font-size: 20px;
     color: $primary;
-    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
 }
 
 .details-subheader {
     display: flex;
     flex-direction: column;
-    align-items: start;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
+
+    img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .details-image {
@@ -41,7 +48,6 @@
 .details-content {
     display: flex;
     flex-direction: column;
-    align-items: start;
     gap: 8px;
 }
 
@@ -49,28 +55,29 @@
     display: flex;
 
     .details-content-title {
-        width: 80px;
-        font-weight: $medium;
+        width: 100px;
+        font-weight: $bold;
+        text-transform: uppercase;
     }
 }
 
 .details-description {
     text-align: justify;
     font-size: 14px;
+    margin-top: 12px;
 }
 
 .details-menu {
     display: flex;
     justify-content: center;
-    align-items: start;
-    gap: 10px;
+    gap: 8px;
     padding-top: 12px;
 }
 
 .details-menu-item {
     width: 50%;
     height: 100%;
-    border: 1px solid $quaternary;
+    border: 1.2px solid $secondary;
     border-radius: 8px;
     text-align: center;
     padding: 10px;
@@ -80,6 +87,7 @@
         font-size: 16px;
         font-weight: $semibold;
         padding-bottom: 8px;
+        border-bottom: 1.2px solid $secondary;
     }
 
     .details-menu-wrapper {
@@ -89,7 +97,6 @@
 
         .details-menu-description {
             font-size: 14px;
-            background-color: #eff2f8;
             padding: 6px 2px;
             border-radius: 4px;
         }
@@ -97,26 +104,39 @@
 }
 
 .details-review-wrapper {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    row-gap: 8px;
-    column-gap: 12px;
-    color: $secondary;
+    display: flex;
+    flex-direction: column;
+    overflow-anchor: auto;
+    gap: 12px;
     padding-top: 12px;
+    max-height: 400px;
+    overflow: auto;
 
     .details-review-item {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        border: 1px solid $tertiary;
+        border: 1px solid $secondary;
         border-radius: 8px;
         padding: 12px;
         gap: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: .9;
+        transform: scale(.9);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1);
+        }
 
         .review-item-header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
 
             .review-item-user {
                 display: flex;
@@ -130,8 +150,8 @@
             }
 
             .review-item-date {
-                color: $secondary;
                 font-size: 14px;
+                margin-left: 6px;
             }
         }
 
@@ -139,6 +159,7 @@
             border-top: 1px solid $tertiary;
             padding-top: 10px;
             font-size: 14px;
+            margin-bottom: 18px;
         }
     }
 }
@@ -146,20 +167,6 @@
 .icons {
     height: 24px;
     width: 24px;
-}
-
-.divider-my2 {
-    height: 1px;
-    width: 100%;
-    background-color: $primary;
-    margin: 20px 0;
-}
-
-.divider-my1 {
-    height: 1px;
-    width: 100%;
-    background-color: $primary;
-    margin: 10px 0;
 }
 
 .divider {
@@ -244,16 +251,6 @@
         }
     }
 
-    .details-review-wrapper {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: 20px;
-        column-gap: 12px;
-    }
-
-    .form-review {
-        width: 60%;
-    }
-
     .search-input-wrapper {
         width: 60%;
     }
@@ -277,16 +274,5 @@
 
     .details-menu {
         gap: 20px;
-    }
-
-    .details-menu-item .details-menu-wrapper {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 8px;
-    }
-
-    .details-review-wrapper {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        row-gap: 20px;
-        column-gap: 12px;
     }
 }

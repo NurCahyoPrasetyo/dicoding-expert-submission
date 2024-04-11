@@ -14,6 +14,11 @@ const Favorite = {
       <p id="favorite-none"></p>
       <div class="item_list"></div>
     </section>
+    
+    <div class="overlay">
+      <img src="" alt="Zoomed Image" class="zoomed-image" />
+      <button class="close-button" id="close-zoom">X</button>
+    </div>
     `;
   },
 

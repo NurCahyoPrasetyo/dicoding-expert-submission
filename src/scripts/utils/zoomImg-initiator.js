@@ -1,6 +1,5 @@
 const ZoomImgInitiator = {
   init({ zoomedImg, closeZoomBtn, clickableImages, overlay }) {
-    console.log("test", { zoomedImg, closeZoomBtn, clickableImages, overlay });
     clickableImages.forEach(async (button) => {
       button.addEventListener("click", (event) => {
         this._handleShowZoomedImage(event, zoomedImg, clickableImages, overlay);

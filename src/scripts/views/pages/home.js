@@ -1,6 +1,5 @@
 import TheRestaurantDbSource from "../../data/restaurantdb-source";
 import { createRestaurantItemTemplate } from "../templates/tamplate-creator";
-import ZoomImgInitiator from "../../utils/zoomImg-initiator";
 
 const Home = {
   async render() {
@@ -37,12 +36,6 @@ const Home = {
     const restaurantContainer = document.querySelector("#restaurant");
     const loadingElement = document.querySelector(".loader-wrapper");
     const searchInput = document.querySelector(".search-input");
-
-    //Zoom content
-    const zoomedImg = document.querySelector(".zoomed-image");
-    const closeZoomBtn = document.querySelector("#close-zoom");
-    const clickableImages = document.querySelectorAll(".clickable-image");
-    const overlay = document.querySelector(".overlay");
 
     let restaurants;
 
@@ -84,13 +77,6 @@ const Home = {
       restaurantContainer.innerHTML = "";
       loadingElement.classList.remove("display-none");
       await renderRestaurants();
-    });
-
-    ZoomImgInitiator.init({
-      zoomedImg: zoomedImg,
-      closeZoomBtn: closeZoomBtn,
-      clickableImages: clickableImages,
-      overlay: overlay,
     });
   },
 };

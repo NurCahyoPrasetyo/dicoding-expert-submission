@@ -51,14 +51,25 @@ class App {
       overlay: this._overlay,
     });
 
-    // //! NOT WORKING BECOUSE CONPONENT IS RENDER
-    // ZoomImgInitiator.init({
-    //   zoomedImg: this._zoomedImg,
-    //   closeZoomBtn: this._closeZoomBtn,
-    //   clickableImages: this._clickableImages,
-    //   overlay: this._overlay,
-    // });
+    // kita bisa menginisiasikan komponen lain bila ada
+  }
 
+  _initialAppShellAfterRender() {
+    ZoomImgInitiator.init({
+      zoomedImg: this._zoomedImg,
+      closeZoomBtn: this._closeZoomBtn,
+      clickableImages: this._clickableImages,
+      overlay: this._overlay,
+    });
+
+    AsesibilitasInitiator.init({
+      navItem: this._navItem,
+      hamburgerBtn: this._hamburgerBtn,
+      navLists: this._navLists,
+      mainElement: this._mainElement,
+      clickableImages: this._clickableImages,
+      overlay: this._overlay,
+    });
     // kita bisa menginisiasikan komponen lain bila ada
   }
 
@@ -68,7 +79,17 @@ class App {
     this._mainElement.innerHTML = await page.render();
     await page.afterRender();
 
-    console.log("_zoomedImg", this._zoomedImg);
+    //this component only show when after render
+    const zoomedImg = document.querySelector(".zoomed-image");
+    const closeZoomBtn = document.querySelector("#close-zoom");
+    const clickableImages = document.querySelectorAll(".clickable-image");
+    const overlay = document.querySelector(".overlay");
+
+    this._zoomedImg = zoomedImg;
+    this._closeZoomBtn = closeZoomBtn;
+    this._clickableImages = clickableImages;
+    this._overlay = overlay;
+    this._initialAppShellAfterRender();
   }
 }
 

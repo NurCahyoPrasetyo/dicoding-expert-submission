@@ -23,7 +23,15 @@ const AsesibilitasInitiator = {
     });
   },
 
-  _handleTabKey(event, navItem, hamburgerBtn, navLists, mainElement) {
+  _handleTabKey(
+    event,
+    navItem,
+    hamburgerBtn,
+    navLists,
+    mainElement,
+    clickableImages,
+    overlay
+  ) {
     if (event.key === "Tab" && navLists.classList.contains("open")) {
       const lastNavItem = navItem[navItem.length - 1];
       if (lastNavItem === event.target)
@@ -32,7 +40,9 @@ const AsesibilitasInitiator = {
 
     if (event.key === "Escape") {
       DrawerInitiator._closeDrawer(hamburgerBtn, navLists, mainElement);
-      ZoomImgInitiator._handleCloseZoom(clickableImages, overlay);
+      if (clickableImages.length > 0) {
+        ZoomImgInitiator._handleCloseZoom(clickableImages, overlay);
+      }
     }
   },
 };

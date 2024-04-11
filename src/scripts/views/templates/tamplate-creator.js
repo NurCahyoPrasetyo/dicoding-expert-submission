@@ -80,16 +80,6 @@ const createDetailRestaurantTemplate = (restaurant) => `
 </div>
 `;
 
-const createRestaurantSearchItemTemplate = (restaurant) => `
-    <card-search-item
-    id="${restaurant.id}"
-    href="${`/#/details/${restaurant.id}`}"
-    name="${restaurant.name}"
-    city="${restaurant.city}"
-    rating="${restaurant.rating}"
-    ></card-search-item>
-`;
-
 const createLikeButtonTemplate = () => `
   <button aria-label="Tambah ke Favorite" title="Tambah ke Favorite" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -105,7 +95,6 @@ const createLikedButtonTemplate = () => `
 export {
   createRestaurantItemTemplate,
   createDetailRestaurantTemplate,
-  createRestaurantSearchItemTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
 };
