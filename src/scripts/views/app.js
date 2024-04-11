@@ -51,13 +51,13 @@ class App {
       overlay: this._overlay,
     });
 
-    //! NOT WORKING BECOUSE CONPONENT IS RENDER
-    ZoomImgInitiator.init({
-      zoomedImg: this._zoomedImg,
-      closeZoomBtn: this._closeZoomBtn,
-      clickableImages: this._clickableImages,
-      overlay: this._overlay,
-    });
+    // //! NOT WORKING BECOUSE CONPONENT IS RENDER
+    // ZoomImgInitiator.init({
+    //   zoomedImg: this._zoomedImg,
+    //   closeZoomBtn: this._closeZoomBtn,
+    //   clickableImages: this._clickableImages,
+    //   overlay: this._overlay,
+    // });
 
     // kita bisa menginisiasikan komponen lain bila ada
   }
@@ -67,6 +67,8 @@ class App {
     const page = routes[url];
     this._mainElement.innerHTML = await page.render();
     await page.afterRender();
+
+    console.log("_zoomedImg", this._zoomedImg);
   }
 }
 

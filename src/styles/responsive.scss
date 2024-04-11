@@ -2,21 +2,6 @@
 
 //screen for tablet
 @media screen and (min-width: 600px) {
-    // .hero_container {
-    //     height: 360px;
-
-    //     .hero_content {
-    //         h1 {
-    //             font-size: 36px;
-    //         }
-
-    //         p {
-    //             font-size: 16px;
-    //             width: 70%;
-    //         }
-    //     }
-    // }
-
     .resto_list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -43,60 +28,6 @@
 
 //screen laptop
 @media screen and (min-width: 1200px) {
-    // #hamburger {
-    //     display: none;
-    // }
-
-    // .nav_containers>.nav_brand {
-    //     .logo_wrapper {
-    //         height: 44px;
-    //         padding: 0 28px;
-    //         display: inline-block;
-    //     }
-    // }
-
-    // .nav_contents {
-    //     .nav_lists {
-    //         display: flex;
-    //         flex-direction: row;
-    //         align-items: center;
-    //         justify-content: center;
-    //         gap: 6px;
-
-    //         height: auto;
-    //         width: auto;
-    //         margin: 0;
-
-    //         background-color: transparent;
-    //         position: relative;
-    //         box-shadow: unset;
-    //         animation: unset;
-
-    //         a {
-    //             padding: 0px 24px;
-    //         }
-    //     }
-    // }
-
-    // .jumbotron_containers {
-    //     height: 50vh;
-
-    //     img {
-    //         min-width: 1000px;
-    //     }
-
-    //     .jumbotron_contents {
-    //         h1 {
-    //             font-size: 48px;
-    //         }
-
-    //         p {
-    //             font-size: 22px;
-    //             width: 50%;
-    //         }
-    //     }
-    // }
-
     .resto_container {
         padding: 36px 40px;
 

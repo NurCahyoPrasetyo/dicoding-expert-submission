@@ -4,6 +4,7 @@ import "../styles/index.scss";
 import "../scripts/components/index";
 
 import App from "./views/app";
+import swRegister from "./utils/sw-register";
 
 const app = new App({
   hamburgerBtn: document.querySelector("#hamburger"),
@@ -23,4 +24,5 @@ window.addEventListener("hashchange", () => {
 
 window.addEventListener("load", () => {
   app.renderPage();
+  swRegister();
 });
