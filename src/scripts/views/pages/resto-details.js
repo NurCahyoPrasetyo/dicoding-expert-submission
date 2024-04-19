@@ -1,9 +1,9 @@
 import TheRestaurantDbSource from "../../data/restaurantdb-source";
 import UrlParser from "../../routes/url-parser";
-import { createDetailRestaurantTemplate } from "../templates/tamplate-creator";
 import FavoriteRestaurantIdb from "../../data/favorite-restaurant-idb";
 import LikeButtonInitiator from "../../utils/like-button-initiator";
 import PostReviewInitiator from "../../utils/post-review-initiator";
+import { createDetailRestaurantTemplate } from "../templates/tamplate-creator";
 
 const RestoDetails = {
   async render() {

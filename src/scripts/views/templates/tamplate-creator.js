@@ -1,10 +1,11 @@
+/* eslint-disable indent */
 import CONFIG from "../../globals/config";
 
 const createRestaurantItemTemplate = (restaurant) => `
 <card-item
   id="${restaurant.id}"
   href="${`/#/details/${restaurant.id}`}"
-  image="${CONFIG.BASE_IMAGE_URL + "/small/" + restaurant.pictureId}"
+  image="${`${CONFIG.BASE_IMAGE_URL}/small/${restaurant.pictureId}`}"
   name="${restaurant.name}"
   city="${restaurant.city}"
   rating="${restaurant.rating}"
@@ -17,7 +18,7 @@ const createDetailRestaurantTemplate = (restaurant) => `
   <item-detail
     name="${restaurant.name}"
     city="${restaurant.city}"
-    image="${CONFIG.BASE_IMAGE_URL + "/small/" + restaurant.pictureId}"
+    image="${`${CONFIG.BASE_IMAGE_URL}/small/${restaurant.pictureId}`}"
     rating="${restaurant.rating}"
     address="${restaurant.address}"
     category="${restaurant.categories
