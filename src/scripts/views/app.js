@@ -79,7 +79,7 @@ class App {
     this._mainElement.innerHTML = await page.render();
     await page.afterRender();
 
-    //this component only show when after render
+    // this component only show when after render
     const zoomedImg = document.querySelector(".zoomed-image");
     const closeZoomBtn = document.querySelector("#close-zoom");
     const clickableImages = document.querySelectorAll(".clickable-image");

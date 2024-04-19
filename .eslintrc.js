@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2020: true,
     node: true,
+    jest: true,
   },
   extends: ["airbnb-base"],
   parserOptions: {
@@ -10,6 +11,12 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
+    //! Delete this because confic with my eslint local config
+    quotes: "off",
+    "comma-dangle": "off",
+    "import/prefer-default-export": "off",
+    "consistent-return": "off",
+    //!
     "import/no-extraneous-dependencies": 0,
     "no-console": 0,
     "no-underscore-dangle": 0,
