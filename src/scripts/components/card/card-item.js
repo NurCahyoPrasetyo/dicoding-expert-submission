@@ -1,4 +1,3 @@
-import ZoomImgInitiator from "../../utils/zoomImg-initiator";
 class CardItem extends HTMLElement {
   connectedCallback() {
     this.render();
