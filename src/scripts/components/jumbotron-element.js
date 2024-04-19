@@ -10,10 +10,17 @@ class JumbotronElement extends HTMLElement {
   render() {
     this.innerHTML = `
     <section class="jumbotron_containers" id="hero">
-    <img
-      src="./images/heros/hero-image_4.jpg"
-      alt="hero-image_4 jumbotron"
+    <picture>
+    <source
+      media="(max-width: 600px)"
+      srcset="./images/heros/hero-image_4-small.jpg"
     />
+    <source
+      media="(max-width: 1280px)"
+      srcset="./images/heros/hero-image_4-medium.jpg"
+    />
+    <img class="lazyload" src="./images/heros/hero-image_4-large.jpg" alt="jumbotron" />
+    </picture>
     <div class="jumbotron_contents">
       <h1>Restoran All In</h1>
       <p>

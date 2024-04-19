@@ -7,10 +7,13 @@ class CardItem extends HTMLElement {
     this.innerHTML = `
         <article class="card">
           <section class="card_img-wrapper"> 
-            <img
-              src="${this.getAttribute("image")}"
-              alt="Gambar ${this.getAttribute("name")}"
-            />
+            <picture>
+              <source type="image/webp" srcset="${this.getAttribute("image")}">
+              <source type="image/jpeg" srcset="${this.getAttribute("image")}">
+              <img  
+                src="${this.getAttribute("image")}"
+                alt="Gambar ${this.getAttribute("name")}">
+            </picture>
             <p>${this.getAttribute("city")}</p>
             <button 
               class="featured-image clickable-image"
