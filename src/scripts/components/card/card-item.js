@@ -8,11 +8,13 @@ class CardItem extends HTMLElement {
         <article class="card">
           <section class="card_img-wrapper"> 
             <picture>
-              <source type="image/webp" srcset="${this.getAttribute("image")}">
-              <source type="image/jpeg" srcset="${this.getAttribute("image")}">
-              <img
-                class="lazyload"  
-                src="${this.getAttribute("image")}"
+            <source media="(max-width: 600px)" srcset="${this.getAttribute(
+              "image"
+            )}">
+            <img
+                class="lazyload"
+                src="./images/default-featured-image.jpg"
+                data-src="${this.getAttribute("image")}"
                 alt="Gambar ${this.getAttribute("name")}">
             </picture>
             <p>${this.getAttribute("city")}</p>
