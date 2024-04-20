@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import TheRestaurantDbSource from "../data/restaurantdb-source";
 import UrlParser from "../routes/url-parser";
 

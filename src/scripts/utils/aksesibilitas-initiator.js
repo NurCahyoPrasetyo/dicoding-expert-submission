@@ -1,3 +1,5 @@
+/* eslint-disable curly */
+/* eslint-disable nonblock-statement-body-position */
 import DrawerInitiator from "./drawer-initiator";
 import ZoomImgInitiator from "./zoomImg-initiator";
 

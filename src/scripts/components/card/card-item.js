@@ -10,7 +10,8 @@ class CardItem extends HTMLElement {
             <picture>
               <source type="image/webp" srcset="${this.getAttribute("image")}">
               <source type="image/jpeg" srcset="${this.getAttribute("image")}">
-              <img  
+              <img
+                class="lazyload"  
                 src="${this.getAttribute("image")}"
                 alt="Gambar ${this.getAttribute("name")}">
             </picture>

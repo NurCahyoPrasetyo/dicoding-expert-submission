@@ -84,12 +84,21 @@ class App {
     const closeZoomBtn = document.querySelector("#close-zoom");
     const clickableImages = document.querySelectorAll(".clickable-image");
     const overlay = document.querySelector(".overlay");
+    const itemContent = document.getElementById("item_content");
 
     this._zoomedImg = zoomedImg;
     this._closeZoomBtn = closeZoomBtn;
     this._clickableImages = clickableImages;
     this._overlay = overlay;
     this._initialAppShellAfterRender();
+
+    this._skipLinkBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      itemContent?.scrollIntoView({ behavior: "smooth" });
+      this._mainElement?.scrollIntoView({ behavior: "smooth" });
+
+      this._skipLinkBtn.blur();
+    });
   }
 }
 

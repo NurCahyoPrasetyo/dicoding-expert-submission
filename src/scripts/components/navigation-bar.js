@@ -11,7 +11,7 @@ class NavigationBar extends HTMLElement {
     this.innerHTML = `
               <nav id="navigationDrawer" class="nav_containers container">
                     <a href="/" class="nav_brandr" aria-label="All In App"
-                      ><img src="./images/icons/icon.png" id="logo" alt="Logo All In"
+                      ><img class="lazyload" src="./images/icons/icon.png" id="logo" alt="Logo All In"
                       width="44" height="44"/></a>
                   <div class="nav_contents">
                     <button

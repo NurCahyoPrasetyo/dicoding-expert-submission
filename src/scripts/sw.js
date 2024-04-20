@@ -14,6 +14,7 @@ const themoviedbApi = new Route(
 );
 
 const themoviedbImageApi = new Route(
+  // eslint-disable-next-line prefer-template
   ({ url }) => url.href.startsWith(CONFIG.BASE_IMAGE_URL + "/small/"),
   new StaleWhileRevalidate({
     cacheName: "therestodb-image-api",
