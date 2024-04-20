@@ -10,13 +10,13 @@ class ItemList extends HTMLElement {
     const items = data.restaurants;
     const cardList = items
       .map(
-        (data) => `
+        (item) => `
       <card-item
-        image="${data.pictureId}"
-        name="${data.name}"
-        city="${data.city}"
-        rating="${data.rating}"
-        description="${data.description}"
+        image="${item.pictureId}"
+        name="${item.name}"
+        city="${item.city}"
+        rating="${item.rating}"
+        description="${item.description}"
       ></card-item>
     `
       )

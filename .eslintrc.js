@@ -13,9 +13,12 @@ module.exports = {
   rules: {
     //! Delete this because confic with my eslint local config
     quotes: "off",
+    indent: "off",
     "comma-dangle": "off",
     "import/prefer-default-export": "off",
     "consistent-return": "off",
+    "no-useless-constructor": "off",
+    "no-param-reassign": "off",
     //!
     "import/no-extraneous-dependencies": 0,
     "no-console": 0,

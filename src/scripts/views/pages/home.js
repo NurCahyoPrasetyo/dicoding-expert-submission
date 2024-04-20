@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import TheRestaurantDbSource from "../../data/restaurantdb-source";
 import { createRestaurantItemTemplate } from "../templates/tamplate-creator";
 

@@ -1,4 +1,5 @@
 const ZoomImgInitiator = {
+  // eslint-disable-next-line object-curly-newline
   init({ zoomedImg, closeZoomBtn, clickableImages, overlay }) {
     clickableImages.forEach(async (button) => {
       button.addEventListener("click", (event) => {
