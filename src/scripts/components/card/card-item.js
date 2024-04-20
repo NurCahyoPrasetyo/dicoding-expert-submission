@@ -8,7 +8,7 @@ class CardItem extends HTMLElement {
         <article class="card">
           <section class="card_img-wrapper"> 
             <picture>
-            <source media="(max-width: 600px)" srcset="${this.getAttribute(
+            <source media="(max-width: 600px)" data-srcset="${this.getAttribute(
               "image"
             )}">
             <img
